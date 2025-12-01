@@ -1,0 +1,367 @@
+:root {
+  --primary: #1a237e;
+  --accent: #ff6f61;
+  --light: #f8f9fa;
+  --dark: #212121;
+  --success: #43a047;
+  --white: #ffffff;
+  --gradient: linear-gradient(135deg, rgba(26, 35, 126, 0.95), rgba(18, 24, 86, 0.85));
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--dark);
+  background-color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.section-title {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar .nav-link {
+  color: var(--dark);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--accent);
+}
+
+.hero-section {
+  min-height: 90vh;
+  background-image: url("https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  padding: 8rem 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient);
+  mix-blend-mode: multiply;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glow {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    box-shadow: 0 35px 70px rgba(255, 255, 255, 0.25);
+  }
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+}
+
+.btn-accent:hover {
+  background: #ff5645;
+  color: var(--white);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.section-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.timeline {
+  border-left: 2px dashed rgba(26, 35, 126, 0.2);
+  padding-left: 1.5rem;
+}
+
+.timeline-item {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -1.65rem;
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.timeline-year {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.founder-card {
+  position: relative;
+}
+
+.founder-note {
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  position: absolute;
+  bottom: -1.25rem;
+  right: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.filter-group .btn {
+  border-radius: 999px;
+}
+
+.filter-group .btn.active {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 50px rgba(26, 35, 126, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.product-card .badge {
+  font-size: 0.75rem;
+}
+
+.product-card .card-body {
+  padding: 1.5rem;
+}
+
+.process-card {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: var(--white);
+  box-shadow: 0 15px 40px rgba(26, 35, 126, 0.08);
+  text-align: center;
+}
+
+.process-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1rem;
+}
+
+.process-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.testimonial-card {
+  background: var(--white);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  min-height: 250px;
+}
+
+.benefit-card {
+  background: var(--white);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.07);
+  height: 100%;
+}
+
+.benefit-card i {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-list li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-list i {
+  color: var(--accent);
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.social-links a {
+  color: var(--white);
+  font-size: 1.25rem;
+  transition: transform 0.2s ease, color 0.2s;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary);
+  color: var(--white);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+}
+
+.back-to-top.show {
+  display: flex;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  background: #25d366;
+  color: var(--white);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
+  z-index: 1050;
+}
+
+.blog-card {
+  border-radius: 1.25rem;
+  background: var(--white);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.blog-card .card-body {
+  flex: 1;
+}
+
+.badge-success {
+  background: var(--success);
+}
+
+.text-accent {
+  color: var(--accent) !important;
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--white);
+}
+
+.btn-outline-light:hover {
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.border-white-25 {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+@media (max-width: 992px) {
+  .hero-section {
+    background-attachment: scroll;
+    text-align: center;
+  }
+
+  .founder-note {
+    position: static;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-card img {
+    height: 180px;
+  }
+
+  .back-to-top,
+  .whatsapp-float {
+    bottom: 1rem;
+  }
+
+  .whatsapp-float {
+    left: 1rem;
+  }
+}
+
