@@ -40,6 +40,12 @@ h6,
   color: var(--accent);
 }
 
+.wmn-logo {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
 .hero-section {
   min-height: 90vh;
   background-image: url("https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1600&q=80");
