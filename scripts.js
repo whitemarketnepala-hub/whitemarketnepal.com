@@ -292,7 +292,7 @@ const init = () => {
   initNewsletter();
   AOS.init({
     duration: 800,
-    once: true,
+    once: false,
   });
   document.getElementById("currentYear").textContent = new Date().getFullYear();
 };
