@@ -129,7 +129,7 @@ const renderProducts = (filter = "all") => {
               <button class="btn btn-sm btn-outline-primary flex-grow-1" data-product="${product.id}">
                 View specs
               </button>
-              <a class="btn btn-sm btn-accent flex-grow-1" href="https://wa.me/9779812345678?text=Hi%20WMN,%20I%20want%20to%20order%20${encodeURIComponent(
+              <a class="btn btn-sm btn-accent flex-grow-1" href="https://wa.me/9779763243439?text=Hi%20WMN,%20I%20want%20to%20order%20${encodeURIComponent(
                 product.title
               )}" target="_blank" rel="noopener">
                 WhatsApp
@@ -203,7 +203,7 @@ const registerProductEvents = () => {
         </ul>
       </div>
     `;
-    modalCTA.href = `https://wa.me/9779812345678?text=Hi%20WMN,%20I%20want%20to%20order%20${encodeURIComponent(
+    modalCTA.href = `https://wa.me/9779763243439?text=Hi%20WMN,%20I%20want%20to%20order%20${encodeURIComponent(
       product.title
     )}`;
     modalCTA.setAttribute("aria-label", `Order ${product.title} on WhatsApp`);
