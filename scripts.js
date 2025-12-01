@@ -281,6 +281,17 @@ const initNewsletter = () => {
   });
 };
 
+const initAOS = () => {
+  AOS.init({
+    duration: 800,
+    easing: "ease-in-out",
+    once: false,
+    mirror: true,
+    offset: 80,
+  });
+  window.addEventListener("load", () => AOS.refreshHard());
+};
+
 const init = () => {
   renderProducts();
   renderBlogs();
@@ -290,10 +301,7 @@ const init = () => {
   initBackToTop();
   initForms();
   initNewsletter();
-  AOS.init({
-    duration: 800,
-    once: false,
-  });
+  initAOS();
   document.getElementById("currentYear").textContent = new Date().getFullYear();
 };
 
